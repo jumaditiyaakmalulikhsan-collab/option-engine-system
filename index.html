@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Option Engine System | OES</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">OES</span>
+            <div>
+                <h1>OPTION ENGINE</h1>
+                <p>SYSTEM / LAPTOP RECOMMENDATION</p>
+            </div>
+        </div>
+        <span class="status">DECISION SUPPORT SYSTEM</span>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">YOUR CHOICE. YOUR PRIORITY.</p>
+            <h2>Find Your <span>Perfect Laptop.</span></h2>
+            <p>
+                Atur 10 poin sesuai prioritasmu.
+                OES akan membantu menentukan laptop yang paling cocok.
+            </p>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">STEP 01</p>
+                    <h2>Alokasi Poin</h2>
+                </div>
+
+                <div class="point-counter">
+                    <span>TOTAL POINTS</span>
+                    <strong id="totalPoin">0 / 10</strong>
+                </div>
+            </div>
+
+            <p class="instruction">
+                Gunakan tombol panah untuk mengatur tingkat kepentingan
+                setiap kategori. Maksimal 5 poin per kategori.
+            </p>
+
+            <div id="kategoriList">
+                <!-- Kategori akan dibuat oleh JavaScript -->
+            </div>
+
+            <div class="allocation-footer">
+                <div>
+                    <p>SISA POIN</p>
+                    <strong id="sisaPoin">10</strong>
+                </div>
+
+                <button id="btnLanjut" disabled>
+                    LANJUTKAN →
+                </button>
+            </div>
+
+            <p id="pesan" class="message" aria-live="polite">
+                Alokasikan tepat 10 poin untuk melanjutkan.
+            </p>
+        </section>
+
+        <section class="panel result-panel" id="hasilRekomendasi" hidden>
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">YOUR BEST MATCH</p>
+                    <h2>Rekomendasi Terbaik Untukmu</h2>
+                </div>
+                <div class="point-counter">
+                    <span>SKOR SAW</span>
+                    <strong id="skorTerbaik">-</strong>
+                </div>
+            </div>
+
+            <div class="result-content">
+                <div class="laptop-image-placeholder" id="gambarLaptop">
+                    <span>GAMBAR LAPTOP</span>
+                    <p>Gambar produk akan ditambahkan nanti.</p>
+                </div>
+
+                <div class="laptop-details">
+                    <p class="eyebrow">REKOMENDASI OES</p>
+                    <h3 id="namaLaptop">Nama laptop</h3>
+                    <p class="laptop-price" id="hargaLaptop">Harga laptop</p>
+
+                    <div class="spec-list" id="spesifikasiLaptop"></div>
+
+                    <div class="recommendation-reason">
+                        <h4>Kenapa laptop ini dipilih?</h4>
+                        <p id="alasanRekomendasi">
+                            Laptop ini memperoleh skor SAW tertinggi berdasarkan bobot prioritasmu.
+                        </p>
+                    </div>
+
+                    <button id="btnUbahPilihan" type="button">
+                        ← UBAH ALOKASI POIN
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            OPTION ENGINE SYSTEM © 2026
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
