@@ -67,12 +67,6 @@ body {
     letter-spacing: 2px;
 }
 
-.brand p {
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
 .status {
     color: var(--blue);
     border: 1px solid var(--border);
