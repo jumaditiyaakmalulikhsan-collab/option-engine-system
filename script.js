@@ -114,6 +114,7 @@ const totalPoin = document.getElementById("totalPoin");
 const sisaPoin = document.getElementById("sisaPoin");
 const pesan = document.getElementById("pesan");
 const btnLanjut = document.getElementById("btnLanjut");
+const btnReset = document.getElementById("btnReset");
 
 function hitungTotal() {
     return kategori.reduce((total, item) => total + item.poin, 0);
@@ -209,6 +210,7 @@ const hasilRekomendasi = document.getElementById("hasilRekomendasi");
 const skorTerbaik = document.getElementById("skorTerbaik");
 const namaLaptop = document.getElementById("namaLaptop");
 const hargaLaptop = document.getElementById("hargaLaptop");
+const btnBeliLaptop = document.getElementById("btnBeliLaptop");
 const spesifikasiLaptop = document.getElementById("spesifikasiLaptop");
 const alasanRekomendasi = document.getElementById("alasanRekomendasi");
 const btnUbahPilihan = document.getElementById("btnUbahPilihan");
@@ -231,6 +233,26 @@ function tampilkanHasilRekomendasi() {
 
     skorTerbaik.textContent = terbaik.skor.toFixed(4);
     namaLaptop.textContent = dataTerbaik.nama;
+    const fotoLaptop = document.getElementById("fotoLaptop");
+
+const gambarLaptop = {
+  "Acer Aspire Lite 14": "image/acer.jpg",
+  "ASUS Vivobook S14": "image/asus.jpg",
+  "ADVAN Workmate": "image/advan.jpg",
+  "HP EliteBook 8 G1i": "image/hp.jpg",
+  "Lenovo ThinkPad T14 Gen 6": "image/lenovo.jpg"
+};
+
+fotoLaptop.src = gambarLaptop[dataTerbaik.nama] || "";
+const linkPembelian = {
+  "Acer Aspire Lite 14": "https://www.tokopedia.com/search?st=product&q=Acer%20Aspire%20Lite%2014",
+  "ASUS Vivobook S14": "https://www.tokopedia.com/search?st=product&q=ASUS%20Vivobook%20S14",
+  "ADVAN Workmate": "https://www.tokopedia.com/search?st=product&q=ADVAN%20Workmate",
+  "HP EliteBook 8 G1i": "https://www.tokopedia.com/search?st=product&q=HP%20EliteBook%208%20G1i",
+  "Lenovo ThinkPad T14 Gen 6": "https://www.tokopedia.com/search?st=product&q=Lenovo%20ThinkPad%20T14%20Gen%206"
+};
+
+btnBeliLaptop.href = linkPembelian[dataTerbaik.nama] || "https://www.tokopedia.com/";
     hargaLaptop.textContent = formatRupiah(dataTerbaik.harga);
 
     spesifikasiLaptop.innerHTML = `
@@ -275,3 +297,13 @@ btnUbahPilihan.addEventListener("click", () => {
 
 
 tampilkanKategori();
+
+
+btnReset.addEventListener("click", () => {
+  kategori.forEach((item) => {
+    item.poin = 0;
+  });
+
+  tampilkanKategori();
+});
+

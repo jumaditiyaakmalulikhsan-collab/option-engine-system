@@ -11,10 +11,10 @@
 
 <body>
     <header class="topbar">
-        <div class="brand">
-            <span class="brand-icon">OES</span>
-            <div>
-                <h1>OPTION ENGINE SYSTEM</h1>
+        <span class="brand-icon">
+            <img src="image/logo.png" alt="Logo OES">
+        </span>
+            <h1>(OES) OPTION ENGINE SYSTEM</h1>
             </div>
         </div>
         <span class="status">DECISION SUPPORT SYSTEM</span>
@@ -22,8 +22,10 @@
 
     <main class="container">
         <section class="intro">
-            <p class="eyebrow">YOUR CHOICE. YOUR PRIORITY.</p>
-            <h2>Find Your <span>Perfect Laptop.</span></h2>
+            <p class="eyebrow">Created by Unindra Students</p>
+            <h2>Your Choice. Your Specs.
+            <br>
+            <span>One-Click Approval.</span></h2>
             <p>
                 Atur 10 poin sesuai prioritasmu.
                 OES akan membantu menentukan laptop yang paling cocok.
@@ -52,16 +54,24 @@
                 <!-- Kategori akan dibuat oleh JavaScript -->
             </div>
 
-            <div class="allocation-footer">
-                <div>
-                    <p>SISA POIN</p>
-                    <strong id="sisaPoin">10</strong>
-                </div>
+            
+<div class="allocation-footer">
+  <div class="remaining-actions">
+    <div>
+      <p>SISA POIN</p>
+      <strong id="sisaPoin">10</strong>
+    </div>
 
-                <button id="btnLanjut" disabled>
-                    LANJUTKAN →
-                </button>
-            </div>
+    <button id="btnReset" class="btn-reset" type="button">
+      ↻ RESET POIN
+    </button>
+  </div>
+
+  <button id="btnLanjut" disabled>
+    LANJUTKAN →
+  </button>
+</div>
+
 
             <p id="pesan" class="message" aria-live="polite">
                 Alokasikan tepat 10 poin untuk melanjutkan.
@@ -80,13 +90,24 @@
                 </div>
             </div>
 
-            <div class="result-content">
-                <div class="laptop-image-placeholder" id="gambarLaptop">
-                    <span>GAMBAR LAPTOP</span>
-                    <p>Gambar produk akan ditambahkan nanti.</p>
-                </div>
+           <div class="result-content">
+    <div class="laptop-visual">
+        <div class="laptop-image-placeholder" id="gambarLaptop">
+            <img id="fotoLaptop" src="" alt="Foto laptop rekomendasi">
+        </div>
 
-                <div class="laptop-details">
+        <a
+            id="btnBeliLaptop"
+            class="btn-primary"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            TERTARIK? LIHAT LAPTOP INI →
+        </a>
+    </div>
+
+    <div class="laptop-details">
                     <p class="eyebrow">REKOMENDASI OES</p>
                     <h3 id="namaLaptop">Nama laptop</h3>
                     <p class="laptop-price" id="hargaLaptop">Harga laptop</p>

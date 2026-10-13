@@ -51,15 +51,21 @@ body {
 }
 
 .brand-icon {
-    width: 52px;
-    height: 52px;
-    display: grid;
-    place-items: center;
-    background: var(--blue);
-    color: #10121a;
-    font-weight: 900;
-    font-size: 19px;
-    border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .brand h1 {
@@ -508,4 +514,98 @@ footer {
     .laptop-price {
         font-size: 21px;
     }
+}
+
+.allocation-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.remaining-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.btn-reset {
+  min-height: 48px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--blue);
+  color: #ffffff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-reset:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .allocation-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .remaining-actions {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  #btnLanjut {
+    width: 100%;
+  }
+}
+.laptop-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+#btnBeliLaptop {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 10px 14px;
+    border: 1px solid #20baff;
+    border-radius: 6px;
+    background: #20baff;
+    color: #10131b;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#btnBeliLaptop:hover {
+    background: transparent;
+    color: #20baff;
+}
+
+/* Memperbesar gambar laptop rekomendasi */
+.laptop-image-placeholder {
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.laptop-image-placeholder img {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    object-fit: contain;
+    display: block;
 }
